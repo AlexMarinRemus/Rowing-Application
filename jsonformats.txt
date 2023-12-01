@@ -1,0 +1,51 @@
+register & authenticate:
+{
+    "netId" : "user",
+    "password" : "password"
+}
+
+hello:
+no json object needed
+
+details:
+{
+    "positions": "cox",
+    "certificate": "C4",
+    "gender": "M",
+    "organization": "org",
+    "level": true
+}
+
+requestMatch:
+{
+     "timeslots": ["20-12-2012 17:33;31-12-2022 15:22"]
+}
+
+acceptedMatch:
+after accesing requestMatch, copy one of the received TransferMatches into the body of this request.
+
+createTraining:
+{
+    "timeSlot":"20-12-2022 10:00;20-12-2022 14:00",
+    "boat":"C4",
+    "positions": ["cox", "coach"]
+}
+
+createCompetition:
+{
+    "timeSlot": "20-12-2022 09:00 ; 20-12-2022 11:00",
+    "boat":"C4",
+    "organization": "A",
+    "gender": "female",
+    "competitive": true,
+    "positions": ["cox","coach"]
+}
+
+sendAcceptedUsers:
+after making a request to getOwnerNotifications, choose a subset of the received TransferMatches and copy it into the body of this request.
+
+getOwnerNotifications:
+this request only requires the Bearer Token to be copied into the Authorization -> Bearer field in Postman.
+
+getParticipantNotifications:
+this request only requires the Bearer Token to be copied into the Authorization -> Bearer field in Postman.
